@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="form.css">
+  <title>STUDENT LOGIN</title>
+</head>
+<body>
+<form id="myForm" action="redirect.html" onsubmit="return validateForm()">
+<label for="username">STUDENT NAME :-</label>
+<input type="text" placeholder="only A-Z a-z" name="username" id="username"  minlength="5" maxlength="80" oninput="validateusername()">
+<p id="resulta"></p><br>
+<label for="mobilenumber">MOBILE NUMBER :-</label>
+<input type="text" placeholder="only 0-9" name="mobilenumber" id="mobile" minlength="3" maxlength="12" oninput="validatemobile()">
+<p id="resultb"></p><br>
+<label for="email">EMAIL :-</label>
+<input type="text" name="" id="email" placeholder="example@email.com" minlength="4" maxlength="50" oninput="validateemail()">
+<p id="resultc"></p><br>
+<label for="school">SCHOOL NAME :-</label>
+<input type="text" name="" id="school" placeholder="only A-Z a-z" oninput="validateschoolname()">
+<p id="resultd"></p><br>
+<label for="password">PASSWORD :-</label>
+<input type="password" name="" id="password" placeholder="min-character 8" minlength="8" maxlength="25" oninput="validatepassword()">
+<p id="resulte"></p><br>
+<input type="submit" value="SUBMIT"  onsubmit="success()">
+</form>
+<script src="form.js"></script>
+</body>
+</html>
+

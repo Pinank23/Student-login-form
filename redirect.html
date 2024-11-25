@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDIRECTED</title>
+  <style>
+body {
+  background-image: url(bg.jpg); /* replace with your image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Create a container for the parallax effect */
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Add animation to the container */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(163, 147, 147, 0.5), rgba(255, 255, 255, 0));
+  animation: parallax 10s linear infinite;
+}
+
+/* Define the animation */
+@keyframes parallax {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Add some styling to the h1 element */
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  animation: rotateIn 2s ease-in-out;
+}
+
+/* Add rotate-in animation to the h1 element */
+@keyframes rotateIn {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Add animation to the background */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0));
+  animation: pulse 5s ease-in-out infinite;
+}
+
+/* Define the pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Add animation to the text */
+h1 span {
+  animation: wave 5s ease-in-out infinite;
+}
+
+/* Define the wave animation */
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>SUCCESSFULLY LOGIN</h1>
+  </div>
+</body>
+</html>
